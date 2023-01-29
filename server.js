@@ -4,6 +4,7 @@ const Errorhandler = require("./middleware/errorhandler")
 const app = express();
 const login = require("./routes/login");
 const register = require("./routes/register");
+const folders = require("./routes/Folders")
 const cors = require("cors")
 
 
@@ -19,6 +20,7 @@ app.use(cors())
 
 app.use("/login", login );
 app.use("/register", register);
+app.use("/folders",folders)
 
 
 app.use(Errorhandler);
